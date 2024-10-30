@@ -12,13 +12,13 @@ main();
 function quizQuestion(question){
     let a = Math.floor(Math.random()*7)+3; 
     let b = Math.floor(Math.random()*7)+3;
-    let product = a*b;
+    let equation = a*b;
     let entry = 0;
-    while (entry != product && entry != "q"){
+    while (entry != equation && entry != "q"){
         entry= prompt("question " + question + ": what is " + a + " * " + b + " ?");
         if (entry == a *b ) alert("correct.")
             else alert("incorrect");
-        
+        //must return to 1 but idk how//
     }
 }
     function main() {
@@ -28,3 +28,14 @@ function quizQuestion(question){
     }
     
 }
+function askFive(){
+    askQuestion();
+    askQuestion();
+    askQuestion();
+    askQuestion();
+    askQuestion();
+
+}
+var score =0;
+for (let question=1; question<6; question = question +//???)//
+    
