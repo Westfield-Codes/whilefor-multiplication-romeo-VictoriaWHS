@@ -10,13 +10,17 @@ function main() {
     if (score == 0) alert("Perfect!");
     else alert("You had "+score+" errors");
 }
-/* Setup */
-// Define a function called main and then call it up top.
-// Define a function called askFive and call it from inside main().
-// Define a function called askQuestion and call it from inside askFive() as askQuestion(1);
-
-/* STAGE 1:ASK A QUESTION */
-
+/* askFive calls askQuestion five times, counting and returning number wrong
+ * @param: none
+ * @return: score (0-5)
+ */
+function askFive() {
+    let score = 0;
+    for (let question = 1; question <= 5; question++) {
+        score += askQuestion(question);
+    }
+    return score;
+}
 /* askQuestion asks a multiplication question, returns 1 if incorrect
  * @param: question (integer 1-5)
  * @return: integer (0 or 1)
@@ -44,17 +48,7 @@ function askQuestion(question){
 
 /* STAGE 1:ASK 5 QUESTIONS */
 
-/* askFive calls askQuestion five times, counting and returning number wrong
- * @param: none
- * @return: score (0-5)
- */
-function askFive() {
-    let score = 0;
-    for (let question = 1; question <= 5; question++) {
-        score += askQuestion(question);
-    }
-    return score;
-}
+
 // Create a variable score, set to 0
 // Write a for loop with question as the index, values 1 to 5
 // Call askQuestion in the loop, with question as argument
