@@ -47,7 +47,13 @@ function askQuestion(question){
 /* TEST BEFORE CONTINUING TO STAGE TWO! */
 
 /* STAGE 1:ASK 5 QUESTIONS */
-
+askFive(){
+    let score = 0;
+    for (let question = 1; question<6; question++){
+        score += askQuestion(question);
+    }
+    return score;
+}
 
 // Create a variable score, set to 0
 // Write a for loop with question as the index, values 1 to 5
